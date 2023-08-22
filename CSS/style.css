@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@keyframes obstacle-move {
+    from{
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes mario-move {
+    0%{
+        bottom: 0;
+    }
+    35%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    to{
+        bottom: 0;
+    }
+}
+
+.Game-container{
+    width: 80%;
+    height: 500px;
+    border: 1px solid #161616;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.Img-Obstaculo{
+position: absolute;
+bottom: 0;
+height: 80px;
+animation: obstacle-move infinite 2s linear;
+}
+
+.mario{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+}
+.pular{
+    animation: mario-move 500ms ease-out;
+}
